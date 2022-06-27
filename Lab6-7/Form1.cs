@@ -512,7 +512,7 @@ namespace Lab6_7
             var seven_matrix = Seven_Bit((byte[,])matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(seven_matrix, "seven_bit", "4and7matrix");
 
-            byte[,] four_matrix = Four_Bit((byte[,])matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix = Four_Bit((byte[,])matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(four_matrix, "four_bit", "4and7matrix");
 
             //Even
