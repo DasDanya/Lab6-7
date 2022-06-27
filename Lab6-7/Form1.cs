@@ -519,7 +519,7 @@ namespace Lab6_7
             even_encode = Even_Encode((byte[,])seven_matrix.Clone());
             NewImage(even_encode, "Code_Even", "Even");
 
-            byte[,] even_decode = Even_Decode(even_encode); // сделал локальной переменной и изменил byte[,] на var
+            var even_decode = Even_Decode(even_encode); // сделал локальной переменной и изменил byte[,] на var
             CheckError(seven_matrix, even_decode, "Make7_bit", "Decode_Evene", textBox1);
             NewImage(even_decode, "Decode_Even", "Even");
 
