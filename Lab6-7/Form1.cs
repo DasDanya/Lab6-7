@@ -523,77 +523,77 @@ namespace Lab6_7
             CheckError(seven_matrix, even_decode, "Make7_bit", "Decode_Evene", textBox1);
             NewImage(even_decode, "Decode_Even", "Even");
 
-            byte[,] even_error_code = (byte[,])even_encode.Clone(); // сделал локальной переменной и изменил byte[,] на var
+            var even_error_code = (byte[,])even_encode.Clone(); // сделал локальной переменной и изменил byte[,] на var
             Error_Code(ref even_error_code, 1, 7);
             NewImage(even_error_code, "Error_Code", "Even");
 
-            byte[,] even_error_decode = Even_Decode(even_error_code); //  изменил byte[,] на var
+            var even_error_decode = Even_Decode(even_error_code); //  изменил byte[,] на var
             CheckError(seven_matrix, even_error_decode, "Make7_bit", "Decode_Error_Evene", textBox8);
             NewImage(even_error_decode, "Error_Decode", "Even");
 
             // Hemming_table
-            byte[,] four_matrix_hemming_table = Hemming_Table_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_hemming_table = Hemming_Table_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(four_matrix_hemming_table, "Hemming_table", "Hemming_Table");
 
-            byte[,] four_matrix_hemming_table_decode = Hemming_Table_Decode((byte[,])four_matrix_hemming_table.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_hemming_table_decode = Hemming_Table_Decode((byte[,])four_matrix_hemming_table.Clone()); // сделал локальной переменной и изменил byte[,] на var
             CheckError(four_matrix, four_matrix_hemming_table_decode, "Make4_bit", "Hemming_table_Decode", textBox3);
             NewImage(four_matrix_hemming_table_decode, "Hemming_table_Decode", "Hemming_Table");
 
-            byte[,] four_matrix_hemming_table_error = (byte[,])four_matrix_hemming_table.Clone(); //  изменил byte[,] на var
+            var four_matrix_hemming_table_error = (byte[,])four_matrix_hemming_table.Clone(); //  изменил byte[,] на var
             Error_Code(ref four_matrix_hemming_table_error, 4, 7);
             NewImage(four_matrix_hemming_table_error, "Hemming_table_Error", "Hemming_Table");
-            byte[,] four_matrix_hemming_table_error_decode = Hemming_Table_Decode(four_matrix_hemming_table_error); //  изменил byte[,] на var
+            var four_matrix_hemming_table_error_decode = Hemming_Table_Decode(four_matrix_hemming_table_error); //  изменил byte[,] на var
 
             CheckError(four_matrix, four_matrix_hemming_table_error_decode, "Make4_bit", "Hemming_table_Error_Decode", textBox6);
             NewImage(four_matrix_hemming_table_error_decode, "Hemming_table_Error_Decode", "Hemming_Table");
 
 
             // Hemming_no_table
-            byte[,] four_matrix_hemming_no_table = Hemming_No_Table_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_hemming_no_table = Hemming_No_Table_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(four_matrix_hemming_no_table, "Hemming_no_table", "Hemming_No_Table");
 
-            byte[,] four_matrix_hemming_no_table_decode = Hemming_No_Table_Decode((byte[,])four_matrix_hemming_no_table.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_hemming_no_table_decode = Hemming_No_Table_Decode((byte[,])four_matrix_hemming_no_table.Clone()); // сделал локальной переменной и изменил byte[,] на var
             CheckError(four_matrix, four_matrix_hemming_no_table_decode, "Make4_bit", "Hemming_no_table_Decode", textBox4);
             NewImage(four_matrix_hemming_no_table_decode, "Hemming_no_table_Decode", "Hemming_No_Table");
 
-            byte[,] four_matrix_hemming_no_table_error = (byte[,])four_matrix_hemming_no_table.Clone(); //  изменил byte[,] на var
+            var four_matrix_hemming_no_table_error = (byte[,])four_matrix_hemming_no_table.Clone(); //  изменил byte[,] на var
             Error_Code(ref four_matrix_hemming_no_table_error, 4, 7);
             NewImage(four_matrix_hemming_no_table_error, "Hemming_no_table_Error", "Hemming_No_Table");
 
-            byte[,] four_matrix_hemming_no_table_error_decode = Hemming_No_Table_Decode((byte[,])four_matrix_hemming_no_table_error.Clone()); //  изменил byte[,] на var
+            var four_matrix_hemming_no_table_error_decode = Hemming_No_Table_Decode((byte[,])four_matrix_hemming_no_table_error.Clone()); //  изменил byte[,] на var
             CheckError(four_matrix, four_matrix_hemming_no_table_error_decode, "Make4_bit", "Hemming_no_table_Error_Decode", textBox5);
             NewImage(four_matrix_hemming_no_table_error_decode, "Hemming_no_table_Error_Decode", "Hemming_No_Table");
 
             //Inverse
-            byte[,] inverse_encode = Inverse_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var inverse_encode = Inverse_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(inverse_encode, "Inverse_Code", "Inverse");
 
-            byte[,] inverse_decode = Inverse_Decode(inverse_encode); // сделал локальной переменной и изменил byte[,] на var
+            var inverse_decode = Inverse_Decode(inverse_encode); // сделал локальной переменной и изменил byte[,] на var
             CheckError(four_matrix, inverse_decode, "Make4_bit", "Inverse_Decode", textBox2);
             NewImage(inverse_decode, "Inverse_Decode", "Inverse");
 
-            byte[,] inverse_error_code = (byte[,])inverse_encode.Clone(); //  изменил byte[,] на var
+            var inverse_error_code = (byte[,])inverse_encode.Clone(); //  изменил byte[,] на var
             Error_Code(ref inverse_error_code, 4, 7);
 
-            byte[,] Inverse_Error_Decode = Inverse_Decode(inverse_error_code); // изменил byte[,] на var
+            var Inverse_Error_Decode = Inverse_Decode(inverse_error_code); // изменил byte[,] на var
             CheckError(four_matrix, Inverse_Error_Decode, "Make4_bit", "Inverse_Decode_Error", textBox7);
 
             NewImage(inverse_error_code, "Inverse_Error_Code", "Inverse");
             NewImage(Inverse_Error_Decode, "Inverse_Error_Decode", "Inverse");
 
             //Cycle
-            byte[,] four_matrix_cycle = Cycle_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_cycle = Cycle_Encode((byte[,])four_matrix.Clone()); // сделал локальной переменной и изменил byte[,] на var
             NewImage(four_matrix_cycle, "Cycle", "Cycle");
 
-            byte[,] four_matrix_cycle_decode = Cycle_Decode((byte[,])four_matrix_cycle.Clone()); // сделал локальной переменной и изменил byte[,] на var
+            var four_matrix_cycle_decode = Cycle_Decode((byte[,])four_matrix_cycle.Clone()); // сделал локальной переменной и изменил byte[,] на var
             CheckError(four_matrix, four_matrix_cycle_decode, "Make4_bit", "Cycle_Decode", textBox9);
             NewImage(four_matrix_cycle_decode, "Cycle_Decode", "Cycle");
 
-            byte[,] cycle_error = (byte[,])four_matrix_cycle.Clone(); //  изменил byte[,] на var
+            var cycle_error = (byte[,])four_matrix_cycle.Clone(); //  изменил byte[,] на var
             Error_Code(ref cycle_error, 4, 7);
             NewImage(cycle_error, "Cycle_Error", "Cycle");
 
-            byte[,] cycle_error_decode = (byte[,])cycle_error.Clone(); //  изменил byte[,] на var
+            var cycle_error_decode = (byte[,])cycle_error.Clone(); //  изменил byte[,] на var
             CheckError(cycle_error, cycle_error_decode, "Make4_bit", "Cycle_Error_Decode", textBox10);
             NewImage(cycle_error_decode, "Cycle_Error_Decode", "Cycle");
         }
