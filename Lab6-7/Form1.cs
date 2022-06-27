@@ -356,27 +356,33 @@ namespace Lab6_7
 
         public void Error_Code(ref byte[,] matrix, int min, int max)
         {
-            for (int i = 0; i < width_image / 2; i++)
+            for (int i = 0; i < width_image; i++)
             {
-                for (int j = 0; j < height_image / 2; j++)
-                {
-                    Create_Error(1, ref matrix[i, j], min, max);
-                }
-            }
 
-            for (int i = width_image / 2; i < width_image; i++)
-            {
-                for (int j = 0; j < height_image / 2; j++)
+                if (i < width_image / 2)
                 {
-                    Create_Error(2, ref matrix[i, j], min, max);
-                }
-            }
 
-            for (int i = 0; i < width_image / 2; i++)
-            {
-                for (int j = height_image / 2; j < height_image; j++)
+                    for (int j = 0; j < height_image; j++)
+                    {
+
+                        if (j < height_image / 2)
+                        {
+                            Create_Error(1, ref matrix[i, j], min, max);
+                        }
+                        else if (j >= height_image / 2)
+                        {
+                            Create_Error(3, ref matrix[i, j], min, max);
+                        }
+
+                    }
+
+                }
+                else if (i >= width_image / 2)
                 {
-                    Create_Error(3, ref matrix[i, j], min, max);
+                    for (int j = 0; j < height_image / 2; j++)
+                    {
+                        Create_Error(2, ref matrix[i, j], min, max);
+                    }
                 }
             }
 
